@@ -1,0 +1,412 @@
+body {
+    background: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #222;
+}
+
+.pdf-content {
+    background: #fff;
+    margin: 40px auto 40px auto;
+    padding: 60px 80px 60px 80px;
+    max-width: 800px;
+    min-height: 1200px;
+    box-shadow: 0 0 24px 4px #bbb;
+    border-radius: 8px;
+    /* Simula una hoja */
+}
+
+.pdf-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pdf-header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 10px;
+}
+
+.logo-izq, .logo-der {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.pdf-header-titulos h1 {
+    font-size: 2em;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pdf-header-titulos h2 {
+    font-size: 1.2em;
+    margin: 6px 0;
+    font-weight: bold;
+}
+
+.pdf-header-titulos h3 {
+    font-size: 1em;
+    margin: 4px 0;
+    font-weight: normal;
+}
+
+.pdf-header-autores,
+.pdf-header-info {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+.pdf-header-autores {
+    margin-top: 40px;
+}
+
+.pdf-header-info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pdf-header-autores p,
+.pdf-header-info p {
+    margin: 2px 0;
+    font-size: 1.05em;
+    text-align: center !important;
+}
+
+.pdf-content h1, .pdf-content h2, .pdf-content h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+    /* APA: títulos alineados a la izquierda */
+}
+
+.pdf-content h1 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+.pdf-content h2 {
+    font-size: 1.15em;
+    margin-top: 28px;
+    margin-bottom: 14px;
+}
+
+.pdf-content h3 {
+    font-size: 1.05em;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.pdf-content p, .pdf-content ul, .pdf-content table {
+    font-size: 1.15em;
+    line-height: 2; /* APA: doble espacio */
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.pdf-content ul {
+    margin-left: 30px;
+}
+
+.pdf-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.pdf-content th, .pdf-content td {
+    border: 1px solid #888;
+    padding: 8px 12px;
+    text-align: left;
+    background: #fafafa;
+}
+
+.pdf-content th {
+    background: #e3e3e3;
+}
+
+.pdf-content img {
+    max-width: 120px;
+    height: auto;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.center {
+    text-align: center;
+    margin: 30px 0;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 30px;
+    background: #1769aa;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #0b375c;
+}
+
+/* --- Memorama --- */
+#memorama {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 40px 20px 20px 20px;
+    border-radius: 8px;
+    text-align: center; /* Centra todo el contenido */
+}
+
+#memorama h1,
+#memorama #stats,
+#memorama #message,
+#memorama button {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#stats {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#card-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    perspective: 600px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card-front {
+    background: #fff;
+    color: #222;
+    border: 3px solid #000;
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    background: #2196f3;
+    color: #000;
+    border: 3px solid  #000;
+}
+
+/* --- Referencias APA --- */
+.pdf-content ul li {
+    font-size: 1.05em;
+    margin-bottom: 8px;
+    text-align: left;
+    line-height: 1.7;
+    /* Sangría francesa visual */
+    padding-left: 20px;
+    text-indent: -20px;
+}
+
+/* Encabezado APA de página */
+.apa-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 110px;
+}
+
+.apa-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 0;
+}
+
+.apa-header-titles {
+    flex: 1;
+    text-align: center;
+    color: #888;
+    font-size: 1.08em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.apa-header-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 1px;
+    background: #bbb;
+    width: 100%;
+}
+
+.apa-page-number {
+    position: absolute;
+    right: 10px;
+    bottom: -18px;
+    font-size: 1em;
+    color: #888;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Portada APA centrada */
+.apa-portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.apa-portada-logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.apa-portada-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.apa-portada-titulos h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.apa-portada-titulos h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+.apa-portada-titulos h3 {
+    font-size: 1.1em;
+    margin: 6px 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.apa-portada-autores p,
+.apa-portada-info p {
+    margin: 2px 0;
+}
+
+/* Portada tipo APA */
+.apa-portada-header {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    min-height: 120px;
+    background: transparent;
+}
+
+.apa-portada-logo-left,
+.apa-portada-logo-right {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 0;
+}
+
+.apa-portada-titulos-header {
+    flex: 1;
+    text-align: center;
+    color: #888;
+    font-size: 1.08em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.apa-portada-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 1.5px;
+    background: #bbb;
+    width: 100%;
+}
+
+.apa-portada-page {
+    position: absolute;
+    right: 10px;
+    bottom: -18px;
+    font-size: 1em;
+    color: #888;
+    font-family: 'Times New Roman', Times, serif;
+}
